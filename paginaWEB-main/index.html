@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --grid-info-size: 250px;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "social info   content"
+        "footer footer footer";
+      grid-template-columns: fit-content var(--grid-info-size) 1fr;
+      grid-template-rows: 1fr 120px;
+      gap: .5rem;
+      padding: .5rem;
+      min-height: 100svh;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    
+      grid-area: info;
+
+      .thumb {
+        width: calc(var(--grid-info-size) - 20px);
+        height: calc(var(--grid-info-size) - 20px);
+        background-color: lightgray;
+        border-radius: 50%;
+        flex: none;
+        z-index: 2;
+        overflow: clip;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      section {
+        background-color: lightcoral;
+        width: 100%;
+        height: 100%;
+        margin-top: -4rem;
+        padding-top: 4rem;
+        z-index: 1;
+        clip-path: polygon(0 20px, 0 100%, 100% 100%, 100% 0);
+      }
+    }
+
+    main {
+      grid-area: content;
+      position: relative;
+      isolation: isolate;
+      padding: 2rem;
+
+
+
+      &:before {
+        content: "";
+        background-color: blueviolet;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        clip-path: polygon(0 calc(var(--grid-info-size) - 5.3rem), 0 100%, 100% 100%, 100% calc(var(--grid-info-size) - 8rem) );
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        grid-auto-rows: minmax(180px,230px);
+        gap: .5rem;
+
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        :first-child {
+          grid-row: span 2;
+          grid-column: 1 / span 3;
+        }
+      }
+    } 
+
+    .social {
+      grid-area: social;
+      display: flex;
+      flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+
+        img {
+      height: 2rem;
+      width: 2rem;
+    }
+    }
+
+
+    footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body>
+<aside>
+    <div class="thumb">
+      <img src="image2.png" alt="profile">
+    </div>
+    <section>aside</section>
+  </aside>
+  <main>
+    <article>
+      <h1>Gabriel Barbosa (gabigol)</h1>
+      <p>
+Gabriel Barbosa é um jogador talentoso que conquistou seu espaço no futebol brasileiro e continua a ser uma figura importante no cenário esportivo nacional.
+      </p>
+    </article>
+    <div class="gallery">
+      <img src="https://picsum.photos/400/400?1" alt="Image 1">
+      <img src="https://picsum.photos/200/200?2" alt="Image 2">
+      <img src="https://picsum.photos/200/200?3" alt="Image 3">
+      <img src="https://picsum.photos/200/200?4" alt="Image 4">
+      <img src="https://picsum.photos/200/200?5" alt="Image 5">
+      <img src="https://picsum.photos/200/200?6" alt="Image 6">
+      <img src="https://picsum.photos/200/200?7" alt="Image 7">
+      <img src="https://picsum.photos/200/200?8" alt="Image 8">
+      <img src="https://picsum.photos/200/200?9" alt="Image 9">
+      <img src="https://picsum.photos/200/200?10" alt="Image 10">
+      <img src="https://picsum.photos/200/200?11" alt="Image 11">
+      <img src="https://picsum.photos/200/200?12" alt="Image 12">
+      <img src="https://picsum.photos/200/200?13" alt="Image 13">
+      <img src="https://picsum.photos/200/200?14" alt="Image 14">
+      <img src="https://picsum.photos/200/200?15" alt="Image 15">
+      <img  src="https://picsum.photos/200/200?16" alt="Image 16">
+      <img src="https://picsum.photos/200/200?17" alt="Image 17">
+      <img src="https://picsum.photos/200/200?18" alt="Image 18">
+      <img src="https://picsum.photos/200/200?19" alt="Image 19">
+    </div>
+  </main>
+  
+  <div class="social">
+    <a href="https://www.facebook.com"><img src="https://api.iconify.design/icon-park-solid:facebook.svg?color=%23bdbdbd" alt="facebook"></a>
+    <a href="https://www.twitter.com"><img src="https://api.iconify.design/icon-park-solid:twitter.svg?color=%23bdbdbd" alt="twitter"></a>
+    <a href="https://www.instagram.com"><img src="https://api.iconify.design/icon-park-solid:instagram.svg?color=%23bdbdbd" alt="instagram"></a>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Niel. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
