@@ -7,43 +7,6 @@ Linguagem de marcação utilizada em sites web, definindo elementos como texto, 
 
 Linguagem de estilo para estilizar o HTML.
 
-# [JS X JAVA X TS]
-## JAVASCRIPT
-JavaScript é uma linguagem leve e dinâmica, usada principalmente para criar interatividade em páginas web. Roda direto no navegador e também no servidor (com Node.js). É flexível, mas isso também pode gerar mais erros se o código crescer muito.
+## [JS]
 
-## Exemplo:
-
-<pre>function somar(a, b) {
-  return a + b;
-}
-
-console.log(somar(5, 3));</pre>
-
-## TYPESCRIPT
-TypeScript é basicamente um “JavaScript melhorado”. Ele adiciona tipagem (ou seja, você define tipos de variáveis, funções, etc.), o que ajuda a evitar erros antes mesmo de rodar o código. No final, o TypeScript é convertido em JavaScript para funcionar no navegador. É muito usado em projetos grandes porque organiza melhor o código.
-
-## Exemplo:
-<pre>
-  function somar(a: number, b: number): number {
-  return a + b;
-}
-
-console.log(somar(5, 3));
-</pre>
-
-## JAVA
-Java já é outra coisa. É uma linguagem mais antiga, forte e totalmente tipada, usada principalmente para sistemas grandes, backend, aplicativos Android e aplicações corporativas. Não roda direto no navegador como JavaScript. Precisa de uma máquina virtual (JVM) para executar.
-
-## Exemplo:
-
-<pre>
-  public class Main {
-    public static int somar(int a, int b) {
-        return a + b;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(somar(5, 3));
-    }
-}
-</pre>
+Utilizado para interatividade, fundamental para desenvolvimento WEB
