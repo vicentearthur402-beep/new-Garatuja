@@ -43,7 +43,46 @@ Java já é outra coisa. É uma linguagem mais antiga, forte e totalmente tipada
     }
 
     public static void main(String[] args) {
+  
         System.out.println(somar(5, 3));
     }
 }
 </pre>
+
+# Programação Orientada ao Objeto
+
+## Classe
+Estrutura que define um molde para criar objetos.
+Em TypeScript, utiliza a palavra-chave class.
+
+## Objeto
+Instância de uma classe.
+Representa um elemento com estado (atributos) e comportamento (métodos).
+
+## Atributo
+Variável definida dentro de uma classe.
+Armazena dados relacionados ao objeto.
+
+## Método
+Função definida dentro de uma classe.
+Representa ações ou comportamentos do objeto.
+
+## Getters e Setters
+Métodos especiais para acessar (get) e modificar (set) atributos.
+Permitem controle e validação no acesso aos dados.
+
+## Construtor
+Método especial chamado ao criar um objeto.
+Usado para inicializar atributos da classe.
+
+## Herança
+Permite que uma classe herde propriedades e métodos de outra.
+Utiliza a palavra-chave extends no TypeScript.
+
+## Encapsulamento
+Restrição de acesso direto aos dados da classe.
+Utiliza modificadores como public, private e protected.
+
+## Polimorfismo
+Capacidade de métodos terem comportamentos diferentes.
+Pode ocorrer via sobrescrita (override) ou interfaces.
